@@ -84,7 +84,7 @@ df -h
 #this will enable Persistence mode on reboot so that the gpus can go to idle power when not used 
 sudo bash -c '(crontab -l; echo "@reboot nvidia-smi -pm 1" ) | crontab -' 
 
-#run the install command for vast
+#run the install command for vast. Run a few times if error is gotten.
 sudo apt install python3 -y
 sudo wget https://console.vast.ai/install -O install; sudo python3 install YourKey; history -d $((HISTCMD-1)); 
 
